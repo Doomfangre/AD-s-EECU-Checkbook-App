@@ -20,27 +20,43 @@ body {
 
 
 /*Side Navbar css*/
+
+a {
+    text-decoration: none;
+    border-radius: 50px;
+    width: max-content;
+}
 #side-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     height: 100vh;
     width: min-content;
     background-color: var(--Primarycolor);
-    
-
+    font-weight: 400;
+    font-size: 2rem;
 }
 
 .sidenav-btns, h3 {
     height: 5vh;
-    border-radius: 50px;
     font-family: 'Roboto Serif', serif;
     text-align: left;
-    font-weight: 400;
-    font-size: 2rem;
     border-style: var(--Primarycolor);
     background-color: var(--Primarycolor);
     color: white;
+    transition: 0.4s ease;
 }
 
-#sidenav-btns:hover {
+.next {
+    color: var(--Primarycolor)
+}
+
+a {
+    display: flex;
+    justify-content: center;
+}
+
+.sidenav-btns:hover {
     background-color: var(--Btn-hover);
 }
 
@@ -60,6 +76,18 @@ body {
     justify-content: flex-start;
 }
 
+.home-link {
+    color: white;
+}
+
+ /*dropdown buttons*/
+.drop-btns {
+    background-color: var(--Primarycolor);
+    border:none;
+    color: white;
+    font-size: 2rem
+}
+
 /*CSS for main expenses*/
 .expenseContainer {
     display: none;
@@ -69,3 +97,14 @@ body {
     display: block;
 }
 
+#container {
+display: flex;
+flex-direction: row;
+}
+
+
+
+.btn-align {
+    display: flex;
+    flex-direction: column;
+}
