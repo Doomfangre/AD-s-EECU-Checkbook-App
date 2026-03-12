@@ -27,18 +27,21 @@
         </div>
     </section>
     <div id="container">
+
         <section id="top-section-1">
             <span class="btn-align">
             <label>Prev.</label>
             <button>
-                <a class=back-btn><img src="imgs/Back.png" alt="Back-Arrow" id="backBtn"></a>
-            </button>
-            </span>
-            <p id="month-text">February</p> <!--Javascript I assume-->
-            <button>
                 <img src="imgs/Back.png" alt="Back-Arrow" id="backBtn">
             </button>
+            </span>
+                <p id="month-text">February</p> <!--Javascript I assume-->
+                <label>Next</label>
+            <button>
+                <img src="imgs/Back.png" alt="Back-Arrow" id="forwardBtn">
+            </button>
         </section>
+
         <section id="top-section-2">
             <span class="btn-align">
             <button id="assign">Assign<img src="Imgs/drop-arrow.png"/></button>
@@ -244,6 +247,11 @@
             </div>
          </div>
     </section>
+
+    <button id="but">Calculate</button>
+
+            <canvas id="chartCanvas" height="873" width="873" style="display: block; box-sizing: border-box; height: 698.4px; width: 698.4px;"></canvas>
+
     <script src="expense.js"></script>
 </body>
 </html>

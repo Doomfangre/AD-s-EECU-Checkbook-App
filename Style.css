@@ -17,8 +17,17 @@ body {
     
 }
 
+#top-section-1 {
+    display: flex;
+}
 
+img[alt="Back-Arrow"] {
+    border: none;
+}
 
+#forwardBtn {
+    transform: rotate(180deg);
+}
 /*Side Navbar css*/
 
 a {
@@ -26,6 +35,7 @@ a {
     border-radius: 50px;
     width: max-content;
 }
+
 #side-nav {
     display: flex;
     flex-direction: column;
@@ -101,8 +111,6 @@ a {
 display: flex;
 flex-direction: row;
 }
-
-
 
 .btn-align {
     display: flex;

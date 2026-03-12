@@ -18,7 +18,7 @@ async function getCareers() {
 
 //creates options for dropdowns & adds Event Listers (needs to be fixed)
 function createOptions(careers) {
-    const dropdown = document.getElementById("careerSelect")
+    const dropdown = document.getElementById("careerSelect");
     careers.forEach((career, index) => {
 
         const options = document.createElement("option");
@@ -33,33 +33,21 @@ function createOptions(careers) {
 }
 
 
+document.getElementById("careerSelect").addEventListener("change", () => {
+    
+  });
+
 
 getCareers(); //initating dropdown creation
 
 function getMonthlyIncome(monthlyIncome) {
     const salary = career.Salary.toLocaleString; //grabbing salary from dropdown, needs to be fixed
-    const monthlyIncome = salary / 12;
+    monthlyIncome = salary / 12;
     options.addEventListener("click", getMonthlyIncome);
     return monthlyIncome;
 }
 
 console.log(getMonthlyIncome());
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
