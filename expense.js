@@ -1,14 +1,8 @@
-document.getElementById("careerSelect").addEventListener("change", (eventy) => {
-  const salary = eventy.target.value;
-  const takeIn = tax(salary);
-  alert(takeIn);
-});
+function createAccount(sure) {
+    dise.textContent = sure;
+    console.log(dise);
+}
 
-document.getElementById("nekst").addEventListener("click", () => {
-    const para = document.getElementById("ppap");
-    para.innerHTML = document.getElementById("account").innerHTML;
-    console.log(para);
-});
 
 // Tax function
 function tax(sally) {
@@ -27,103 +21,38 @@ function tax(sally) {
   return sally;
 }
 
-//grabbing career information and adding to dropdown
-async function getCareers() {
-  const url = "https://eecu-data-server.vercel.app/data";
-  try {
-      const response = await fetch(url);
-      const jobs = await response.json();
-      createOptions(jobs);
-      console.log("initiated");
-      return jobs;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+let count = 1;
+
+const good = document.getElementById("openCategory");
+
+
+good.addEventListener("click", (typo) => {
+  if (count == 6) {
+    alert("No more than 5!")
+  } else {
+    typo = document.getElementById("billy").value;
+    let bill = document.getElementById("actualBill").value;
+    if (typo == "" || bill == "") {
+      alert("Something please!");
+    } else {
+    let pick = document.createElement("p");
+    let pock = document.createElement("p");
+    pick.setAttribute("id", `${typo}`);
+    pock.setAttribute("id", `bill${count}`);
+    pick.textContent = typo;
+    pock.textContent = bill;
+    let tough = document.createElement("section");
+    tough.setAttribute("id", "llib");
+    document.getElementById("manage").appendChild(tough);
+    tough.appendChild(pick);
+    tough.appendChild(pock);
+    count += 1;
+    }
   }
-  catch (error) {
-      console.error("Error fetching careers data:", error);
-      return [];
-  }
-
-}
-
-//creates options for dropdowns & adds Event Listers (needs to be fixed)
-function createOptions(careers) {
-  const dropdown = document.getElementById("careerSelect");
-  careers.forEach((career, index) => {
-
-      const options = document.createElement("option");
-      options.innerHTML = `${career.Occupation}: ${career.Salary.toLocaleString()}`;
-      options.setAttribute("id", `${index}`);
-      options.setAttribute("value", `${career.Salary}`);
-      options.addEventListener("click", () => {
-          careerTitle.innerHTML = `Future Career: ${career.Occupation}`;
-      });
-      dropdown.appendChild(options);
-  });
-}
-
-getCareers(); //initating dropdown creation
-
-// function getMonthlyIncome(monthlyIncome) {
-//     const salary = career.Salary.toLocaleString; //grabbing salary from dropdown, needs to be fixed
-//     monthlyIncome = salary / 12;
-//     options.addEventListener("click", getMonthlyIncome);
-//     return monthlyIncome;
-// }
-
-// console.log(getMonthlyIncome());
-
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-const openDropdown = document.querySelectorAll(".openCategory");
-const categories = document.querySelectorAll(".expenseContainer");
-
-openDropdown.forEach((btn, index), ()=> { //for every button, listening for a click, issue with btn not being defined
-    btn.addEventListener("click", ()=>{
-        categories.forEach((category, number), ()=> { //will go through categories, if category # = btn #, will make category "active" -> will appear
-            if (number === index){
-                category.classList.add("active");
-            } else {
-                category.classList.remove("active"); //else "active" is removed & will disappear
-            }
-        });
-    });
 });
-
-
-document.getElementById("but").addEventListener("click", () => {
-    const canvas = document.getElementById("chartCanvas");
-    const house = document.getElementById("bill1").value;
-    const essen = document.getElementById("bill2").value;
-    const student = document.getElementById("bill3").value;
-    const life = document.getElementById("bill4").value;
-    const future = document.getElementById("bill5").value;
-
-    // Destroy old chart if it exists (common Chart.js gotcha)
-    if (currentChart) currentChart.destroy();
-  
-    // Build chart config based on type
-    const config = doughnutte (house, essen, student, life, future);
-  
-    currentChart = new Chart(canvas, config);
-  });
-
-// DOUGHNUTTE
-function doughnutte(one, two, three, four, five) {
-    
-
- return {
-      type: "doughnut",
-      data: {
-        labels: [one + "(%)", two + "(%)", three + "(%)", four + "(%)", five + "(%)"],
-        datasets: [{ label: "Rider mix", data: [one, two, three, four, five] }]
-      },
-      options: {
-        plugins: {
-          title: { display: true, text: `Total Deduction: ${one} ${two} ${three} ${four} ${five}` }
-        }
-      }
-    };
-}

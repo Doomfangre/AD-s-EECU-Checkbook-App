@@ -6,6 +6,7 @@
     <title>EECU-CheckBook-App</title>
     <link rel="stylesheet" href="Style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_drop_down" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/chart.umd.min.js"></script>
 </head>
 <body>
     <section id="side-nav">
@@ -13,7 +14,8 @@
             <img src="Imgs/logo 1.svg" alt="EECU-Logo">
         </div>
         <a href="index.html" class="home-link">Profile</a>
-        
+        <p id="dise">...</p>
+
         <div id="side-container">
             <span id="sidenav-options">
                 <a class="sidenav-btns" href="#">Budgeting</a>
@@ -76,182 +78,23 @@
 
             <!--Edit Category names and expense names based off sections in project brief-->
             <div>
-                <h4>Category #1</h4>
-                <p class="proposedSectionTotal"></p>
-                <p class="expenseSectionTotal"></p>
-                <p class="leftoverSectionTotal"></p>
-                <button class="openCategory"><img src="Imgs/drop-arrow.png" alt="dropdown arrow"></button>
-            </div>
-            <div class="expenseContainer">
-                <div class="expenseRow">
-                    <h5>Expense #1</h5>
-                    <input type="text" class="proposedBudget">
-                    <input type="text" class="expenses">
-                    <p class="difference"></p>
-                </div>
-                <div class="expenseRow">
-                    <h5>Expense #2</h5>
-                    <input type="text" class="proposedBudget">
-                    <input type="text" class="expenses">
-                    <p class="difference"></p>
-                </div>
-                <div class="expenseRow">
-                    <h5>Expense #3</h5>
-                    <input type="text" class="proposedBudget">
-                    <input type="text" class="expenses">
-                    <p class="difference"></p>
-                </div>
-                <div class="expenseRow">
-                    <h5>Expense #4</h5>
-                    <input type="text" class="proposedBudget">
-                    <input type="text" class="expenses">
-                    <p class="difference"></p>
-                </div>
+                <input id="billy" placeholder="Insert bill type"></input>
+                <input id="actualBill" placeholder="and bill value"></input>
+                <button id="openCategory"></button>
             </div>
 
-            <div>
-                <h4>Category #2</h4>
-                <p class="proposedSectionTotal"></p>
-                <p class="expenseSectionTotal"></p>
-                <p class="leftoverSectionTotal"></p>
-                <button class="openCategory"><img src="Imgs/drop-arrow.png" alt="dropdown arrow"></button>
-            </div>
-            <div class="expenseContainer">
-                <div class="expenseRow">
-                    <h5>Expense #1</h5>
-                    <input type="text" class="proposedBudget">
-                    <input type="text" class="expenses">
-                    <p class="difference"></p>
-                </div>
-                <div class="expenseRow">
-                    <h5>Expense #2</h5>
-                    <input type="text" class="proposedBudget">
-                    <input type="text" class="expenses">
-                    <p class="difference"></p>
-                </div>
-                <div class="expenseRow">
-                    <h5>Expense #3</h5>
-                    <input type="text" class="proposedBudget">
-                    <input type="text" class="expenses">
-                    <p class="difference"></p>
-                </div>
-                <div class="expenseRow">
-                    <h5>Expense #4</h5>
-                    <input type="text" class="proposedBudget">
-                    <input type="text" class="expenses">
-                    <p class="difference"></p>
-                </div>
-            </div>
-            
-            <div>
-                <h4>Category #3</h4>
-                <p class="proposedSectionTotal"></p>
-                <p class="expenseSectionTotal"></p>
-                <p class="leftoverSectionTotal"></p>
-                <button class="openCategory"><img src="Imgs/drop-arrow.png" alt="dropdown arrow"></button>
-            </div>
-            <div class="expenseContainer">
-                <div class="expenseRow">
-                    <h5>Expense #1</h5>
-                    <input type="text" class="proposedBudget">
-                    <input type="text" class="expenses">
-                    <p class="difference"></p>
-                </div>
-                <div class="expenseRow">
-                    <h5>Expense #2</h5>
-                    <input type="text" class="proposedBudget">
-                    <input type="text" class="expenses">
-                    <p class="difference"></p>
-                </div>
-                <div class="expenseRow">
-                    <h5>Expense #3</h5>
-                    <input type="text" class="proposedBudget">
-                    <input type="text" class="expenses">
-                    <p class="difference"></p>
-                </div>
-                <div class="expenseRow">
-                    <h5>Expense #4</h5>
-                    <input type="text" class="proposedBudget">
-                    <input type="text" class="expenses">
-                    <p class="difference"></p>
-                </div>
-            </div>
-
-            <div>
-                <h4>Category #4</h4>
-                <p class="proposedSectionTotal"></p>
-                <p class="expenseSectionTotal"></p>
-                <p class="leftoverSectionTotal"></p>
-                <button class="openCategory"><img src="Imgs/drop-arrow.png" alt="dropdown arrow"></button>
-            </div>
-            
-            <div class="expenseContainer">
-                <div class="expenseRow">
-                    <h5>Expense #1</h5>
-                    <input type="text" class="proposedBudget">
-                    <input type="text" class="expenses">
-                    <p class="difference"></p>
-                </div>
-                <div class="expenseRow">
-                    <h5>Expense #2</h5>
-                    <input type="text" class="proposedBudget">
-                    <input type="text" class="expenses">
-                    <p class="difference"></p>
-                </div>
-                <div class="expenseRow">
-                    <h5>Expense #3</h5>
-                    <input type="text" class="proposedBudget">
-                    <input type="text" class="expenses">
-                    <p class="difference"></p>
-                </div>
-                <div class="expenseRow">
-                    <h5>Expense #4</h5>
-                    <input type="text" class="proposedBudget">
-                    <input type="text" class="expenses">
-                    <p class="difference"></p>
-                </div>
-            </div>
-
-            <div>
-                <h4>Category #5</h4>
-                <p class="proposedSectionTotal"></p>
-                <p class="expenseSectionTotal"></p>
-                <p class="leftoverSectionTotal"></p>
-                <button class="openCategory"><img src="Imgs/drop-arrow.png" alt="dropdown arrow"></button>
-            </div>
-            <div class="expenseContainer">
-                <div class="expenseRow">
-                    <h5>Expense #1</h5>
-                    <input type="text" class="proposedBudget">
-                    <input type="text" class="expenses">
-                    <p class="difference"></p>
-                </div>
-                <div class="expenseRow">
-                    <h5>Expense #2</h5>
-                    <input type="text" class="proposedBudget">
-                    <input type="text" class="expenses">
-                    <p class="difference"></p>
-                </div>
-                <div class="expenseRow">
-                    <h5>Expense #3</h5>
-                    <input type="text" class="proposedBudget">
-                    <input type="text" class="expenses">
-                    <p class="difference"></p>
-                </div>
-                <div class="expenseRow">
-                    <h5>Expense #4</h5>
-                    <input type="text" class="proposedBudget">
-                    <input type="text" class="expenses">
-                    <p class="difference"></p>
-                </div>
-            </div>
          </div>
     </section>
+
+    <section id="manage">
+    <!--All bills go here-->
+    </section> 
 
     <button id="but">Calculate</button>
 
             <canvas id="chartCanvas" height="873" width="873" style="display: block; box-sizing: border-box; height: 698.4px; width: 698.4px;"></canvas>
 
     <script src="expense.js"></script>
+    <script src="pie.js"></script>
 </body>
 </html>
