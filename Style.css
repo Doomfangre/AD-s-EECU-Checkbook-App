@@ -66,8 +66,21 @@ img[alt="Back-Arrow"] {
     padding: none;
 }
 
+#openCategory {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: rgb(120, 120, 120);
+}
+
 #forwardBtn {
     transform: rotate(180deg);
+}
+
+#but {
+    background-color: var(--Primarycolor);
+    color: white;
+    border-radius: 15px;
 }
 /*Side Navbar css*/
 

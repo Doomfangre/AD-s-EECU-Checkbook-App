@@ -3,7 +3,6 @@ function createAccount(sure) {
     console.log(dise);
 }
 
-
 // Tax function
 function tax(sally) {
   const sold = sally;
@@ -27,32 +26,3 @@ function tax(sally) {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-let count = 1;
-
-const good = document.getElementById("openCategory");
-
-
-good.addEventListener("click", (typo) => {
-  if (count == 6) {
-    alert("No more than 5!")
-  } else {
-    typo = document.getElementById("billy").value;
-    let bill = document.getElementById("actualBill").value;
-    if (typo == "" || bill == "") {
-      alert("Something please!");
-    } else {
-    let pick = document.createElement("p");
-    let pock = document.createElement("p");
-    pick.setAttribute("id", `${typo}`);
-    pock.setAttribute("id", `bill${count}`);
-    pick.textContent = typo;
-    pock.textContent = bill;
-    let tough = document.createElement("section");
-    tough.setAttribute("id", "llib");
-    document.getElementById("manage").appendChild(tough);
-    tough.appendChild(pick);
-    tough.appendChild(pock);
-    count += 1;
-    }
-  }
-});

@@ -1,11 +1,39 @@
-if (document.getElementById("next") == null) {
-    console.log("cool");
-} else {
-    document.getElementById("next").addEventListener("click", () => {
-    const name = document.getElementById("account").value;
 
-  });
-}
+
+document.getElementById("dise").innerHTML = JSON.parse(localStorage.getItem("takeIn"));
+document.getElementById("monmon").innerHtml = JSON.parse(localStorage.getItem("nam"));
+
+
+let count = 1;
+
+const good = document.getElementById("openCategory");
+
+
+good.addEventListener("click", (typo) => {
+  if (count == 6) {
+    alert("No more than 5!")
+  } else {
+    typo = document.getElementById("billy").value;
+    let bill = document.getElementById("actualBill").value;
+    if (typo == "" || bill == "") {
+      alert("Something please!");
+    } else {
+    let pick = document.createElement("p");
+    let pock = document.createElement("p");
+    pick.setAttribute("id", `${typo}`);
+    pock.setAttribute("id", `bill${count}`);
+    pick.textContent = typo;
+    pock.textContent = bill;
+    let tough = document.createElement("section");
+    tough.setAttribute("id", "llib");
+    document.getElementById("manage").appendChild(tough);
+    tough.appendChild(pick);
+    tough.appendChild(pock);
+    count += 1;
+    }
+  }
+});
+
 
 let currentChart = null;
 
@@ -18,32 +46,25 @@ document.getElementById("but").addEventListener("click", () => {
     let future = document.getElementById("bill5");
     if (document.getElementById("bill2") == null) {
       essen = 0;
-      console.log("nope");
     } else {
       essen = document.getElementById("bill2").innerHTML;
     }
     if (document.getElementById("bill3") == null) {
       student = 0;
-      console.log("nope");
     } else {
       student = document.getElementById("bill3").innerHTML;
     }
     if (document.getElementById("bill4") == null) {
       life = 0;
-      console.log("nope");
     } else {
       life = document.getElementById("bill4").innerHTML;
     }
     if (document.getElementById("bill5") == null) {
       future = 0;
-      console.log("nope");
     } else {
       future = document.getElementById("bill5").innerHTML;
     }
     
-    if (essen == null) {
-      console.log("aaaaaaaaaa");
-    }
     // Destroy old chart if it exists (common Chart.js gotcha)
     if (currentChart) currentChart.destroy();
   
