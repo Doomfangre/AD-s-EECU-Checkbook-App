@@ -61,6 +61,11 @@ img[alt="Back-Arrow"] {
     border: none;
 }
 
+#backBtn, #forwardBtn {
+    background-color: rgb(121, 150, 202);
+    padding: none;
+}
+
 #forwardBtn {
     transform: rotate(180deg);
 }
