@@ -1,14 +1,12 @@
 document.getElementById("careerSelect").addEventListener("change", (eventy) => {
   const salary = eventy.target.value;
   let takeIn = tax(salary);
-  alert(takeIn);
-  localStorage.setItem("money", JSON.stringify(takeIn));
+  localStorage.setItem("money",  JSON.stringify(takeIn));
 });
 
 
 document.getElementById("account").addEventListener("change", () => {
   let nam = document.getElementById("account").value;
-  alert(nam);
   localStorage.setItem("name", JSON.stringify(nam));
 });
 

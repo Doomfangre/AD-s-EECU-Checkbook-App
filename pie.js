@@ -1,7 +1,5 @@
-
-
-document.getElementById("dise").innerHTML = JSON.parse(localStorage.getItem("takeIn"));
-document.getElementById("monmon").innerHtml = JSON.parse(localStorage.getItem("nam"));
+document.getElementById("dise").innerHTML = JSON.parse(localStorage.getItem("name"));
+document.getElementById("monmon").innerHtml = ("$" + JSON.parse(localStorage.getItem("money")));
 
 
 let count = 1;
@@ -91,3 +89,7 @@ function doughnutte(one, two, three, four, five) {
       }
     };
 }
+
+document.getElementById("assign").addEventListener( "click", () => {
+window.location.reload();
+});
